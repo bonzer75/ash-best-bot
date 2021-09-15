@@ -4,8 +4,6 @@ const { MusicBot } = require('discord-music-system');
 
 let { readdirSync } = require('fs'); 
 
-require("dotenv").config()
-
 client.config = require('./config.js'); 
 
 client.commands = new Discord.Collection();  
