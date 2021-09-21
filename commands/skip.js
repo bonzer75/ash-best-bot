@@ -1,4 +1,4 @@
-module.exports = (client, message) => { 
+module.exports = (client, message) => {
     const voiceChannel = message.member.voice.channel;
 
     if (!voiceChannel) return message.channel.send('Jaja no');
