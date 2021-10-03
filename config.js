@@ -1,7 +1,7 @@
 let config = {
-    prefix: "#",
+    prefix: "sudo ",
     game: "Apex Legends",
-    ownerid: "",
+    ownerid: "505479082771873802",
     ownertag: "Bonzer#6022",
 
   }

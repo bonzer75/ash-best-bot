@@ -1,7 +1,7 @@
 module.exports = (client, message) => { 
     const voiceChannel = message.member.voice.channel;
 
-    if (!voiceChannel) return message.channel.send('Jaja no');
+    if (!voiceChannel) return message.channel.send('Lo siento no');
 
     const permissions = voiceChannel.permissionsFor(message.client.user);
 
@@ -9,5 +9,6 @@ module.exports = (client, message) => {
       return
     }
 
+    message.react('👍');
     client.musicBot.onMessage(message).catch(err => console.log(err));
   }

@@ -6,6 +6,8 @@ let { readdirSync } = require('fs');
 
 client.config = require('./config.js');
 
+client.ownerid = require('./config.js');
+
 //require("dotenv").config()
 
 client.commands = new Discord.Collection();
@@ -36,7 +38,7 @@ for(const file of readdirSync('./commands/')) {
     }
   }
 
-  client.login(process.env.TOKEN)
+  client.login("Nzk1Nzc0MDIzMDc3MzMwOTU0.X_OQTw.EW1GUAfUANJ_Letj4cCwX_knGBg")
   .then(() => {
     console.log(`${client.user.tag} Estoy en línea`);
 
@@ -47,8 +49,14 @@ for(const file of readdirSync('./commands/')) {
 
   });
 
+  client.on('message', (message) => {
+    if(message.content.startsWith(`#play`)) {
+    message.reply("hola, puedes mirar mis comandos con **sudo help**, recuerda que **sudo ** es mi prefijo pendejo")
+   	 }
+    })
+
   client.musicBot = new MusicBot(client, {
-    ytApiKey: process.env.YT,
-    prefix: '#', // Your bot prefix
-    language: 'es' // fr, en, es, pt
+    ytApiKey: "AIzaSyCT8AehcWSM2cmWMRPiSIw5mV815Xcv6iM",
+    prefix: 'sudo ',
+    language: 'es'
   });
