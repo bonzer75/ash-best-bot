@@ -9,5 +9,6 @@ module.exports = (client, message) => {
       return
     }
 
+    message.react('👍');
     client.musicBot.onMessage(message).catch(err => console.log(err));
   }
