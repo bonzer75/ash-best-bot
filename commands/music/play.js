@@ -10,9 +10,7 @@ module.exports = (client, message, args) => {
     }
 
     let cancion = args.join(' ')
-     if(!cancion) {
-      return
-     }
+     if(!cancion) {return}
 
     message.react('👍');
     client.musicBot.onMessage(message).catch(err => console.log(err));
