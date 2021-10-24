@@ -12,15 +12,18 @@ client.ownerid = require('./config.js');
 
 client.commands = new Discord.Collection();
 
-for(const file of readdirSync('./commands/')) {
+for(const folder of readdirSync('./commands/')) {
+
+  for(const file of readdirSync(`./commands/${folder}/`)) {
 
     if(file.endsWith(".js")) {
 
-    let fileName = file.substring(0, file.length - 3);
-
-    let fileContents = require(`./commands/${file}`);
-
-    client.commands.set(fileName, fileContents);
+      let fileName = file.substring(0, file.length - 3);
+  
+      let fileContents = require(`./commands/${folder}/${file}`);
+  
+      client.commands.set(fileName, fileContents);
+      }
     }
   }
 
