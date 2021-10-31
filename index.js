@@ -42,7 +42,7 @@ for(const folder of readdirSync('./commands/')) {
 
   client.login("Nzk1Nzc0MDIzMDc3MzMwOTU0.X_OQTw.EW1GUAfUANJ_Letj4cCwX_knGBg")
   .then(() => {
-    console.log(`${client.user.tag} Estoy en línea`);
+    console.log(`${client.user.tag} v1.4.5 Estoy en línea`);
 
   })
   .catch((err) => {
