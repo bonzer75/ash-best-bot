@@ -1,7 +1,7 @@
 const star = require('star-labs');
 const Discord = require("discord.js");
 
-module.exports = (client, message, args) => {
+module.exports = (client, message, args, config) => {
     let err = args[1]
 	let sub1 = message.mentions.users.first()
 	let sub2 = message.mentions.users.last()
@@ -10,10 +10,24 @@ module.exports = (client, message, args) => {
 		if (!err && sub1 === message.author) return message.channel.send("No puedo creer que enserio hayas pensado que la única persona con la cual podrías tener una relación es contigo mismo, tan patético eres? no consigues que alguien te quiera?")
 		if (sub1 === client.user || sub2 === client.user) return message.channel.send("No puedes shipearme con nadie")
 
+		if(!err) {sub2 = message.author}
+
 	let msg1 = (`Yo digo que **${sub1.username}** y **${sub2.username}**`)
-		if (!err) {
-			msg1 = (`Yo digo que **${sub1.username}** y **${message.author.username}**`)
-		};
+
+	//trucazo para que siempre lucy y yo seamos ganadores
+	if (sub2.id == config.owner[1] || sub2.id == config.wife[1]) {
+		if(sub1.id == config.owner[1] || sub1.id == config.wife[1]) {
+			const embed = new Discord.MessageEmbed()
+			.setTitle(`En respuesta a: ${message.author.username}`)
+			.setDescription(`${msg1} son compatibles un... **100%**:sparkling_heart:			      [█████]`)
+			.setFooter(`VIVAN LOS NOBIOSS`)
+			.setColor(0xe51a4c)
+			.setImage(`https://i.imgur.com/9lAbz2a.gif`)
+			message.channel.send(embed)
+		}
+	}
+
+	//if(message.author.id == config.owner[1])
 
 	const random = Math.floor(Math.random() * 100)
 

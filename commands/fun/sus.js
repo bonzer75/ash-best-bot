@@ -8,6 +8,7 @@ module.exports = (client, message, args) => {
 	]
 
 	if (!sub) return message.channel.send(`Disculpa?`)
+	console.log(sub.user.id)
 
 	message.channel.send(`. 　　　。　　　　•　 　ﾟ　　。 　　.
 
