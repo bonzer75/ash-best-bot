@@ -1,10 +1,9 @@
-module.exports = (client) => {
-  
+module.exports = (client) => {  
     client.user.setPresence( 
       {
         status: "online", 
         game: { 
-          name: client.config.game, 
+          name: client.config.status, 
           type: "PLAYING"
         }
       }

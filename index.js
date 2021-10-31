@@ -2,11 +2,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const { MusicBot } = require('discord-music-system');
 
-let { readdirSync } = require('fs');
+const { readdirSync } = require('fs');
 
-client.config = require('./config.js');
-
-client.ownerid = require('./config.js');
+client.config = require('./config.json');
+const config = require("./config.json");
 
 //require("dotenv").config()
 
@@ -47,19 +46,12 @@ for(const folder of readdirSync('./commands/')) {
 
   })
   .catch((err) => {
-
-    console.error("Error al iniciar sesión: " + err);
+    console.error("Err: " + err);
 
   });
 
-  client.on('message', (message) => {
-    if(message.content.startsWith(`#play`)) {
-    message.reply("hola, puedes mirar mis comandos con **sudo help**, recuerda que **sudo ** es mi prefijo pendejo")
-   	 }
-    })
-
   client.musicBot = new MusicBot(client, {
     ytApiKey: "AIzaSyCT8AehcWSM2cmWMRPiSIw5mV815Xcv6iM",
-    prefix: 'sudo ',
+    prefix: config.prefix,
     language: 'es'
   });
