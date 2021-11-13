@@ -23,7 +23,7 @@ module.exports = (client, message, args, config) => {
 			.setFooter(`VIVAN LOS NOBIOSS`)
 			.setColor(0xe51a4c)
 			.setImage(`https://i.imgur.com/9lAbz2a.gif`)
-			message.channel.send(embed)
+			return message.channel.send(embed)
 		}
 	}
 
