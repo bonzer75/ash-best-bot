@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const { MusicBot } = require('discord-music-system');
 
 const { readdirSync } = require('fs');
-
-client.config = require('./config.json');
 const config = require("./config.json");
 
 //require("dotenv").config()
