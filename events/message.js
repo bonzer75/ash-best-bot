@@ -1,3 +1,5 @@
+const date = Date();
+
 module.exports = (client, message) => { 
 
     const config = require("../config.json");
@@ -18,6 +20,6 @@ module.exports = (client, message) => {
      }
 
     if(message.content.startsWith(config.prefix)) {
-        console.log(`El usuario ${message.author.tag} ha usado el comando ${message}`)
+        console.log(`El usuario ${message.author.tag} ha usado el comando ${message} | ${date}`)
     }
   }
