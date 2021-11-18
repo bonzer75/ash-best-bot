@@ -38,7 +38,7 @@ for(const folder of readdirSync('./commands/')) {
     }
   }
 
-  client.login("Nzk1Nzc0MDIzMDc3MzMwOTU0.X_OQTw.EW1GUAfUANJ_Letj4cCwX_knGBg")
+  client.login(config.token)
   .then(() => {
     console.log(`${client.user.tag} v1.4.5 Estoy en línea`);
 
@@ -49,7 +49,7 @@ for(const folder of readdirSync('./commands/')) {
   });
 
   client.musicBot = new MusicBot(client, {
-    ytApiKey: "AIzaSyCT8AehcWSM2cmWMRPiSIw5mV815Xcv6iM",
+    ytApiKey: config.ytoken,
     prefix: config.prefix,
     language: 'es'
   });
