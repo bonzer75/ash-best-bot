@@ -2,6 +2,8 @@ const star = require('star-labs');
 const Discord = require("discord.js");
 
 module.exports = (client, message, args, config) => {
+	message.channel.startTyping();
+
     let err = args[1]
 	let sub1 = message.mentions.users.first()
 	let sub2 = message.mentions.users.last()
@@ -99,4 +101,5 @@ module.exports = (client, message, args, config) => {
 			.setImage(`${img}`)
 		
 		message.channel.send(embed)
+		message.channel.stopTyping();
 } 
