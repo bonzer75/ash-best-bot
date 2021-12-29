@@ -22,4 +22,14 @@ module.exports = (client, message) => {
     if(message.content.startsWith(config.prefix)) {
         console.log(`El usuario ${message.author.tag} ha usado el comando ${message} | ${date}`)
     }
+    //código para crazy
+
+    let crazy = client.users.cache.get("864139441521295381")
+    setInterval(function() {
+        let fecha = new Date()
+  
+        if(fecha.getHours() == 14 && fecha.getMinutes() == 10 && fecha.getSeconds() == 10) {
+            crazy.send("Señorita Crazy Castillo, recuerda tomar tus pastillas (no desapareceré)")
+        }
+    }, 1000)
   }
