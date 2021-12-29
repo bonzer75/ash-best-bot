@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const {MessageEmbed} = require('discord.js')
+const {MessageEmbed} = require('discord.js');
 
 module.exports = (client, message, args) => { 
 	message.channel.startTyping();
