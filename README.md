@@ -1,11 +1,12 @@
 ## Ash Multipurpose Bot
 
-![](https://64.media.tumblr.com/6db500bc07fb6deddea046b33ee36b7e/6aac45d25e0137cd-31/s500x750/1590ad5b57e8d7dc0f5b316b375db80060942fbe.gifv)
+![](http://pm1.narvii.com/7589/91246e5ee7fe17e3b7d2aeb199a2c852272e22f6r1-1500-667v2_00.jpg)
 
 ### What is this?
-this is my old discord bot called "ash", i maked it when i was learning how to program, i used nodejs and discordjs on this bot.
+Ash is my first discord bot called "ash", i maked it when i was learning how to program, i used nodejs and discordjs on this bot.
+This project is currently not being maintained, it will probably be archived in the future.
 
-**WARING:** Some comands could not work on the last version of discordjs, if u want to help me thanks u some much i have no time to make an upgrade xd
+**WARING:** Some comands doesn't work on discordjs v13, if u want to help me thanks u some much i have no time to make an upgrade xd
 
 ### Features 
 - Roleplay commands
@@ -14,7 +15,7 @@ this is my old discord bot called "ash", i maked it when i was learning how to p
 - A very cool staff
 
 ### Building
-I used 1.14.17.6 LTS and another packages, you can download it with this commands:
+I used Node v14.19.0 LTS and another packages, you can download it with this commands:
 
 `$ npm i discord.js@12.5.3`
 
@@ -24,6 +25,6 @@ I used 1.14.17.6 LTS and another packages, you can download it with this command
 
 `$ npm i nekos.life`
 
-**NOTE:** Some commands use zeew but don't download it, those commands don't work.
+**NOTE:** Some commands use zeew but don't download it, those commands doesn't work.
 
 ___I hope you love it so much as i do, it's very nostalgic for me :'D___
