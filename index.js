@@ -5,6 +5,8 @@ const { MusicBot } = require('discord-music-system');
 const { readdirSync } = require('fs');
 const config = require("./config.json");
 
+const express = require('express');
+const app = express();
 //require("dotenv").config()
 
 client.commands = new Discord.Collection();
@@ -53,3 +55,12 @@ for(const folder of readdirSync('./commands/')) {
     prefix: config.prefix,
     language: 'es'
   });
+
+  //express module
+  app.get("/", (req, res) =>{
+    res.send("Your app is running")
+  })
+
+  app.listen(3000, () => {
+    console.log("O")
+  })
