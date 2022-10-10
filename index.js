@@ -8,7 +8,7 @@ const config = require("./config.json");
 const express = require('express');
 const app = express();
 const path = require('path');
-//require("dotenv").config()
+require("dotenv").config()
 
 client.commands = new Discord.Collection();
 
@@ -41,7 +41,7 @@ for(const folder of readdirSync('./commands/')) {
     }
   }
 
-  client.login(config.token)
+  client.login(process.env.TOKEN)
   .then(() => {
     console.log(`${client.user.tag} v1.4.5 Estoy en línea`);
 
@@ -52,7 +52,7 @@ for(const folder of readdirSync('./commands/')) {
   });
 
   client.musicBot = new MusicBot(client, {
-    ytApiKey: config.ytoken,
+    ytApiKey: process.env.YT,
     prefix: config.prefix,
     language: 'es'
   });
