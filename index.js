@@ -16,9 +16,9 @@ for(const folder of readdirSync('./commands/')) {
     if(file.endsWith(".js")) {
 
       let fileName = file.substring(0, file.length - 3);
-  
+
       let fileContents = require(`./commands/${folder}/${file}`);
-  
+
       client.commands.set(fileName, fileContents);
       }
     }
