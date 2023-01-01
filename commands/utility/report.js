@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
-const {MessageEmbed} = require('discord.js')
+const { MessageEmbed } = require('discord.js')
+require("dotenv").config()
 
 module.exports = (client, message, args) => {
     const server = message.guild;
 
-    let dev = client.users.cache.get(client.ownerid)
+    let dev = client.users.cache.get(process.env.OWNER)
     let report = args.join(' ');
 	if(!report) return
 
@@ -13,6 +14,12 @@ module.exports = (client, message, args) => {
    	    .setDescription(report)
   	    .setColor(0xe51a4c)
    	    .addField('Servidor', `${server.name} __${server.id}__`)
-  	    .addField('Usuario', `${message.author.tag} __${message.author.id}__`)
-  	dev.send(embed)
+        .addField('Usuario', `${message.author.tag} __${message.author.id}__`)
+
+    try {
+        dev.send(embed)
+    } catch (err) {
+        message.channel.send(`**Algo salió mal** ```${ err }``` .`);
+    }
+    #You have to allow direct messages from server members to make this works
 }
