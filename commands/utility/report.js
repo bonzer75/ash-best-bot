@@ -19,7 +19,7 @@ module.exports = (client, message, args) => {
     try {
         dev.send(embed)
     } catch (err) {
-        message.channel.send(`**Algo salió mal** ```${ err }``` .`);
+        message.channel.send("Algo salió muy mal... ```" + err + "``` ");
     }
-    #You have to allow direct messages from server members to make this works
+   //you need to allow direct server messages... i should rework this later
 }
