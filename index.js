@@ -51,11 +51,11 @@ for(const folder of readdirSync('./commands/')) {
 
   });
 
-  client.musicBot = new MusicBot(client, {
+  /*client.musicBot = new MusicBot(client, {
     ytApiKey: process.env.YT,
     prefix: config.prefix,
     language: 'es'
-  });
+  });*/
 
   //express module
   app.get("/", (req, res) =>{
