@@ -1,3 +1,7 @@
 node_modules
 .env
 index-old.js
+
+#update 2023
+Dockerfile.dev
+.vs/
