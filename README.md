@@ -28,3 +28,12 @@ I used Node v14.19.0 LTS and another packages, you can download it with this com
 **NOTE:** Some commands use zeew but don't download it, those commands doesn't work.
 
 ___I hope you love it so much as i do, it's very nostalgic for me :'D___
+
+### Docker
+You can also use docker to get de most acurrated packages version.
+
+Use this command to create the image.
+`$ docker build -t my-app .`
+
+And this to run the image.
+`$ docker run my-app .`
