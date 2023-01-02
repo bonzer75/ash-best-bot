@@ -36,4 +36,4 @@ Use this command to create the image.
 `$ docker build -t my-app .`
 
 And this to run the image.
-`$ docker run my-app .`
+`$ docker run -p 3000:3000 my-app`

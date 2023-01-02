@@ -2,10 +2,11 @@ FROM node:14
 
 WORKDIR /home/app
 
-COPY package.json /home/app
+COPY package*.json /home/app
 RUN npm i
 
 COPY . /home/app
+EXPOSE 3000
 #docker build -t app .
 CMD ["node", "index.js"]
 
