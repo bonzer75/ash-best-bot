@@ -43,7 +43,7 @@ for(const folder of readdirSync('./commands/')) {
 
   client.login(process.env.TOKEN)
   .then(() => {
-    console.log(`${client.user.tag} v1.4.5 Estoy en línea`);
+    console.log(`${client.user.tag} Running...`);
 
   })
   .catch((err) => {
@@ -63,5 +63,5 @@ for(const folder of readdirSync('./commands/')) {
   })
 
   app.listen(3000, () => {
-    console.log("O")
+    console.log("Express Running..")
   })
