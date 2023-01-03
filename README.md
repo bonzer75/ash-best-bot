@@ -15,22 +15,17 @@ This project is currently not being maintained, it will probably be archived in 
 - A very cool staff
 
 ### Building
-I used Node v14.19.0 LTS and another packages, you can download it with this commands:
+I used Node v14.19.0 LTS, make sure to use the right versuion.
+To install de packages use this command:
 
-`$ npm i discord.js@12.5.3`
-
-`$ npm i star-labs`
-
-`$ npm i reddit-fetch`
-
-`$ npm i nekos.life`
+`$ npm i`
 
 **NOTE:** Some commands use zeew but don't download it, those commands doesn't work.
 
 ___I hope you love it so much as i do, it's very nostalgic for me :'D___
 
-### Docker
-You can also use docker to get de most acurrated packages version.
+### Docker build
+You can also use docker if you want to run the app on a server or use a container to develop.
 
 Use this command to create the image.
 `$ docker build -t my-app .`
