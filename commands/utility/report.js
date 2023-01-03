@@ -5,7 +5,6 @@ require("dotenv").config()
 module.exports = (client, message, args) => {
     const server = message.guild;
 
-    let dev = client.users.cache.get(process.env.OWNER)
     let report = args.join(' ');
 	if(!report) return
 
@@ -16,10 +15,15 @@ module.exports = (client, message, args) => {
    	    .addField('Servidor', `${server.name} __${server.id}__`)
         .addField('Usuario', `${message.author.tag} __${message.author.id}__`)
 
+    function sendMessage(embed) {
+        client.users.cache.get(process.env.OWNER).send(embed)
+    }
+
     try {
-        dev.send(embed)
+        sendMessage(embed)
     } catch (err) {
         message.channel.send("Algo salió muy mal... ```" + err + "``` ");
+        console.log("Something went wrong")
     }
    //you need to allow direct server messages... i should rework this later
 }
