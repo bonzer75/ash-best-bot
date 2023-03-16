@@ -6,7 +6,7 @@
 Ash is my first discord bot called "ash", i maked it when i was learning how to program, i used nodejs and discordjs on this bot.
 This project is currently not being maintained, it will probably be archived in the future.
 
-**WARING:** Some comands doesn't work on discordjs v13, if u want to help me thanks u some much i have no time to make an upgrade xd
+**WARING:** Some comands doesn't work on discordjs v13, and this bot is tooo old, packages can have some vulnerabilties.
 
 ### Features 
 - Roleplay commands
